@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>ng-model</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <link rel="stylesheet" href="/ex.ng-model/index.css">
+    <script src="/ex.ng-model/index.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body ng-app="myApp" ng-controller="myController">
+      <div class="jumbotron jumbotron-fluid">   
+          <div class="container text-center">
+              <h1 class="display-3">Demo ng-model</h1>
+              <p class="lead">test thử nghiệm coi ra gì</p>
+          </div>
+      </div>
+      <div class="container">
+          <div class="row">
+                <div class="form-group">
+                  <select class="form-control" name="" id="" ng-model="hienthi">
+                    <option value="luoi">Dạng lưới</option>
+                    <option value="cot">Dạng cột</option>
+                  </select>
+                </div>
+          </div>
+      </div>
+      <div class="container {{hienthi}}">
+          <div class="row">
+              <div class="tin">
+              <img src="/ex.ng-model/1.jpg" alt="Picture Phone">
+              <p>Một số tính năng mới của iOS 14 đã có mặt trên Android từ nhiều năm qua.
+                  <br>
+                  Thêm widget lên màn hình chính. Trên iOS 14, người dùng có thể thêm widget lên màn hình chính để xem nhanh một số thông tin như tình trạng pin, giờ thế giới, lịch hẹn... Trước khi iOS 14 ra mắt, người dùng chỉ có thể đặt biểu tượng ứng dụng lên màn hình chính, còn widget chỉ xuất hiện khi vuốt sang màn hình ngoài cùng bên trái. Widget trên màn hình chính đã có mặt trên Android từ năm 2008.
+              </p>
+            </div>
+            <hr>
+            <div class="tin">
+                <img src="/ex.ng-model/1.jpg" alt="Picture Phone">
+                <p>Một số tính năng mới của iOS 14 đã có mặt trên Android từ nhiều năm qua.
+                    <br>
+                    Thêm widget lên màn hình chính. Trên iOS 14, người dùng có thể thêm widget lên màn hình chính để xem nhanh một số thông tin như tình trạng pin, giờ thế giới, lịch hẹn... Trước khi iOS 14 ra mắt, người dùng chỉ có thể đặt biểu tượng ứng dụng lên màn hình chính, còn widget chỉ xuất hiện khi vuốt sang màn hình ngoài cùng bên trái. Widget trên màn hình chính đã có mặt trên Android từ năm 2008.
+                </p>
+              </div>
+              <hr>
+              <div class="tin">
+                <img src="/ex.ng-model/1.jpg" alt="Picture Phone">
+                <p>Một số tính năng mới của iOS 14 đã có mặt trên Android từ nhiều năm qua.
+                    <br>
+                    Thêm widget lên màn hình chính. Trên iOS 14, người dùng có thể thêm widget lên màn hình chính để xem nhanh một số thông tin như tình trạng pin, giờ thế giới, lịch hẹn... Trước khi iOS 14 ra mắt, người dùng chỉ có thể đặt biểu tượng ứng dụng lên màn hình chính, còn widget chỉ xuất hiện khi vuốt sang màn hình ngoài cùng bên trái. Widget trên màn hình chính đã có mặt trên Android từ năm 2008.
+                </p>
+              </div>
+              <hr>
+              <div class="tin a">
+                <img src="/ex.ng-model/1.jpg" alt="Picture Phone">
+                <p>Một số tính năng mới của iOS 14 đã có mặt trên Android từ nhiều năm qua.
+                    <br>
+                    Thêm widget lên màn hình chính. Trên iOS 14, người dùng có thể thêm widget lên màn hình chính để xem nhanh một số thông tin như tình trạng pin, giờ thế giới, lịch hẹn... Trước khi iOS 14 ra mắt, người dùng chỉ có thể đặt biểu tượng ứng dụng lên màn hình chính, còn widget chỉ xuất hiện khi vuốt sang màn hình ngoài cùng bên trái. Widget trên màn hình chính đã có mặt trên Android từ năm 2008.
+                </p>
+              </div>
+          </div>
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

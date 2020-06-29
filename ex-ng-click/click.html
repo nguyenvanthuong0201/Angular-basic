@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <title>Ng-Click</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="/ex-ng-click/click.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/ex-ng-click/click.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body ng-controller="myController">
+      <div class="jumbotron text-center">
+          <h1 class="display-3">Jumbo heading</h1>
+          <p class="lead">sử dụng để chỉnh simple page</p>
+      </div>
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="khoi1 cards" ng-show="hienthi">
+                    <p class="float-left" style="margin-right: 10px;">{{giatri}}</p>
+                    <button type="button" class="btn btn-info"><i class="fa fa-pencil" ng-click="suatext()"></i></button>
+                </div>
+
+                <div class="khoi2 cards" ng-show="!hienthi">
+                    <input type="text" value="Xíu bạn có đi chơi không này" class="float-left" style="margin-right: 10px;width:250px;" ng-model="giatri">
+                    <button type="button" class="btn btn-warning"><i class="fa fa-check" ng-click="suatext()"></i></button>
+                </div>            
+            </div>
+        </div>
+    </div>
+    -->
+    <div class="container" ng-repeat="employee in employee" ng-init="employee.hienthi=true">
+        <div class="row" ng-show="employee.hienthi">
+            <div class="col-sm-12">
+                <div class="card">
+                    <h5 class="card-header">Name :{{employee.name|uppercase}} <button class="float-right"><i class="fa fa-pencil" ng-click="suatext(employee)"></i></button></h5>
+                    <div class="card-body">
+                        <p class="card-text"><b>Năm sinh:</b> {{employee.birthday |date:"dd/MM/yyyy"}}</p>
+                        <p class="card-text"><b>Lương: </b> {{employee.salary|currency:'VNĐ'}}</p>
+                        <p class="card-text"> <b>Phòng ban:</b> {{employee.department}}</p>
+                    </div>
+                </div>  
+            </div>     
+        </div>  
+
+        <div class="row" ng-show="!employee.hienthi">
+            <div class="col-sm-12">
+                <div class="card">
+                    <h5 class="card-header">Name: <input class="text-uppercase" type="text" name="" id="" value="{{employee.name |uppercase}}"ng-model="employee.name"></h5>
+                    <div class="card-body">
+                        <p class="card-text"><b>Năm sinh:</b><input type="date" name="" id="" value="{{employee.birthday |date:'dd/MM/yyyy'}}"ng-model="employee.birthday" ng-change="employee.birthday = (employee.birthday|date:'dd/MM/yyyy')"></p>
+                        <p class="card-text"><b>Lương: </b><input type="text" name="" id="" value="{{employee.salary|currency:'VNĐ'}}"ng-model="employee.salary"></p>
+                        <p class="card-text"> <b>Phòng ban:</b> <input type="text" name="" id="" value="{{employee.department}}"ng-model="employee.department"></p>
+                        <button type="button" class="btn btn-outline-primary btn-block" ng-click="suatext(employee)">Lưu</button>
+                    </div>
+                </div>  
+            </div>     
+        </div>
+
+    </div>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
