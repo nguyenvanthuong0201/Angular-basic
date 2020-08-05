@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+
+<head>
+  <title>Ui Select</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <!--
+    IE8 support, see AngularJS Internet Explorer Compatibility http://docs.angularjs.org/guide/ie
+    For Firefox 3.6, you will also need to include jQuery and ECMAScript 5 shim
+  -->
+  <!--[if lt IE 9]>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/es5-shim/2.2.0/es5-shim.js"></script>
+    <script>
+      document.createElement('ui-select');
+      document.createElement('ui-select-match');
+      document.createElement('ui-select-choices');
+    </script>
+  <![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="http://127.0.0.1:8081/angular_library/uiselect//lib/bootstrap4/jquery/jquery.min.js"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet"
+    href="http://127.0.0.1:8081/angular_library/uiselect//lib/bootstrap4/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://127.0.0.1:8081/angular_library/uiselect//lib/angular/angular-material.min.css">
+  <link rel="stylesheet" href="http://127.0.0.1:8081/angular_library/uiselect//select.css">
+  <link rel="stylesheet" href="http://127.0.0.1:8081/angular_library/uiselect//1.css">
+</head>
+
+<body ng-controller="myController">
+  <div class="container">
+    <div class="row justify-content-center ">
+      <div class="col-sm-4">
+        <ui-select ng-model="selected.value" class="border border-primary">
+          <ui-select-match>
+            <span ng-bind="$select.selected.name"></span>
+          </ui-select-match>
+          <ui-select-choices repeat="item in (itemArray | filter: $select.search) track by item.id">
+            <span ng-bind="item.name"></span>
+          </ui-select-choices>
+        </ui-select>
+        <button type="button" class="btn btn-outline-primary btn-block" ng-click="laydulieu()">Lưu dữ liệu</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="http://127.0.0.1:8081/angular_library/uiselect//lib/angular/angular.min.js"></script>
+  <script src="http://127.0.0.1:8081/angular_library/uiselect//select.js"></script>
+  <script src="http://127.0.0.1:8081/angular_library/uiselect//lib/angular/angular-sanitize.min.js"></script>
+  <script src="http://127.0.0.1:8081/angular_library/uiselect//lib/bootstrap4/dist/js/bootstrap.min.js"></script>
+  <script src="http://127.0.0.1:8081/angular_library/uiselect//lib/angular/angular-animate.min.js"></script>
+  <script src="http://127.0.0.1:8081/angular_library/uiselect//lib/angular/angular-route.js"></script>
+  <script src="http://127.0.0.1:8081/angular_library/uiselect//lib/angular/angular-aria.min.js"></script>
+  <script src="http://127.0.0.1:8081/angular_library/uiselect//lib/angular/angular-messages.min.js"></script>
+  <script src="http://127.0.0.1:8081/angular_library/uiselect//lib/angular/angular-material.min.js"></script>
+  <script src="http://127.0.0.1:8081/angular_library/uiselect//1.js"></script>
+</body>
+</html>

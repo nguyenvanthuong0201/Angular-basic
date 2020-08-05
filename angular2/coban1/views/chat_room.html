@@ -1,0 +1,104 @@
+    <!--main content start-->
+    <section id="main-content">
+      <section class="wrapper site-min-height">
+        <!-- page start-->
+        <div class="chat-room mt">
+          <aside class="mid-side">
+            <div class="chat-room-head">
+
+              <div class="row pad3">
+                <div class="col-sm-8">
+                  <h3 style="color:#797979;">Chat Room</h3>
+                </div>
+                <div class="col-sm-1" style="margin-top: 10px;font-size: 15px;text-align: right ; color:#797979;">Search:</div>
+                <div class="col-sm-3 chat-room-head bg ">
+                    <input id="search_info"  type="text;" oninput="setCustomValidity('')" placeholder="Thông tin tìm kiếm" class="form-control search-btn" autocomplete="on">           
+                </div> 
+              </div>
+              
+            </div>
+              <hr>
+            <div id="dataScroll" class="card-body msg_card_body custom-scrollbar-css">
+              <div id="content">
+
+                <div class="group-rom">
+                  <div class="third-part">12:30</div>
+                  <div class="second-part full" style="text-align: right;">
+                    <div class="font_1">Hi Mark, have ajahskjdhaskjdhsajdsadasdsadsadhsadjsahjdksahjdshakdhs  </div> </div>
+                </div>
+
+
+                <div class="group-rom" style="background-color: #f7f8fa;">
+                  <div class="first-part odd">Thương Nguyễn</div>
+                  <div class="second-part" style="text-align: left;">Hi Mark, have a minute?</div>
+                  <div class="third-part" style="text-align: right;">12:30</div>
+                </div>
+              
+                
+              </div>
+            </div>
+            <footer>
+              <div class="chat-txt">
+                <input type="text" class="form-control">
+              </div>
+              <div class="btn-group hidden-sm hidden-xs">
+                <button type="button" class="btn btn-white"><i class="fa fa-meh-o"></i></button>
+                <button type="button" class="btn btn-white"><i class=" fa fa-paperclip"></i></button>
+              </div>
+              <button class="btn btn-theme" onclick="sendMessage()">Send</button>
+            </footer>
+          </aside>
+          <aside class="right-side">
+            <div class="user-head">
+              <a href="#" class="chat-tools btn-theme"><i class="fa fa-cog"></i> </a>
+              <a href="#" class="chat-tools btn-theme03"><i class="fa fa-key"></i> </a>
+            </div>
+            <div class="invite-row">
+              <h4 class="pull-left">Team Members</h4>
+              <a href="#" class="btn btn-theme04 pull-right">+ Invite</a>
+            </div>
+            <ul class="chat-available-user">
+              <li>
+                <a href="chat_room.html">
+                  <img class="img-circle" src="img/friends/fr-02.jpg" width="32">
+                  Paul Brown
+                  <span class="text-muted">1h:02m</span>
+                </a>
+              </li>
+              <li>
+                <a href="chat_room.html">
+                  <img class="img-circle" src="img/friends/fr-05.jpg" width="32">
+                  David Duncan
+                  <span class="text-muted">1h:08m</span>
+                </a>
+              </li>
+              <li>
+                <a href="chat_room.html">
+                  <img class="img-circle" src="img/friends/fr-07.jpg" width="32">
+                  Laura Smith
+                  <span class="text-muted">1h:10m</span>
+                </a>
+              </li>
+              <li>
+                <a href="chat_room.html">
+                  <img class="img-circle" src="img/friends/fr-08.jpg" width="32">
+                  Julia Schultz
+                  <span class="text-muted">3h:00m</span>
+                </a>
+              </li>
+              <li>
+                <a href="chat_room.html">
+                  <img class="img-circle" src="img/friends/fr-01.jpg" width="32">
+                  Frank Arias
+                  <span class="text-muted">4h:22m</span>
+                </a>
+              </li>
+            </ul>
+          </aside>
+        </div>
+        <!-- page end-->
+      </section>
+      <!-- /wrapper -->
+    </section>
+    <!-- /MAIN CONTENT -->
+<div ng-include="'general/footer.html'"></div>

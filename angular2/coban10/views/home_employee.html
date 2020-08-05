@@ -1,0 +1,62 @@
+<section id="main-content">
+  <section class="wrapper">
+    <h3><i class="fa fa-angle-right"></i>Tài khoản</h3>
+    <div class="row">
+      <!-- /col-md-12 -->
+      <div class="col-sm-12 mt">
+        <div class="content-panel">
+          <table class="table table-hover ">
+            <div class="row">
+              <div class="col-sm-8">
+                <h4><i class="fa fa-angle-right"></i>Tài khoản nhân viên</h4>
+              </div>
+              <div class="col-sm-1" style="margin-top: 10px;font-size: 15px;text-align: right;">Search:</div>
+              <div class="col-sm-3 chat-room-head bg ">
+                <input id="search_info" type="text;" oninput="setCustomValidity('')" placeholder="Thông tin tìm kiếm"
+                  class="form-control search-btn" autocomplete="on" ng-model="search">
+              </div>
+              <div ng-show="false">
+                <md-button ng-click = "showToast1()">Show Simple Alert</md-button>
+                <md-button ng-click = "showToast2()">Show Simple Alert</md-button>
+                </div>
+            </div>
+            <hr>
+            <thead>
+              <tr>
+                <th ng-click="sortData('email')">Email <div ng-class="getSortClass('email')"></div></th>
+                <th ng-click="sortData('password')">Password <div ng-class="getSortClass('password')"></div></th>
+                <th ng-click="sortData('fullname')">FullName <div ng-class="getSortClass('fullname')"></div></th>
+                <th ng-click="sortData('role')">Role <div ng-class="getSortClass('role')"></div></th>
+                <th>Edit</th>
+              </tr>
+            </thead>
+            <tbody ng-repeat="employee in hienthi|filter:search|orderBy:sortColumn:reverse" ng-init="employee.show=true">
+              <tr ng-show="employee.show"> 
+                <input type="hidden" value="{{employee.id}}">
+                <td>{{employee.email}}</td>
+                <td>{{employee.password}}</td>
+                <td>{{employee.username}}</td>
+                <td>{{employee.role}}</td>
+                <td><button style="color: yellow;background-color: #34495E;" type="button" class="btn btn-outline-warning fa fa-pencil" ng-click="sua(employee)"></button></td>
+              </tr>
+              <tr ng-show="!employee.show"> 
+               <input type="hidden" value="{{employee.id}}">
+                <td>{{employee.email}}</td>
+                <td>{{employee.password}}</td>
+                <td><input type="text" value="{{employee.username}}" ng-model="employee.username"></td>
+                <td><input type="text" value="{{employee.role}}" ng-model="employee.role"></td>
+                <td><button style="color: lawngreen;background-color: #34495E" type="button" class="btn btn-outline-primary fa fa-check" ng-click="luusua(employee)"></button>
+                    <button style="color: red;background-color: #34495E" type="button" class="btn btn-outline-primary fa fa-close" ng-click="khongsua(employee)"></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- /col-md-12 -->
+    </div>
+    <!-- /row -->
+  </section>
+</section>
+<!-- /MAIN CONTENT -->
+<div ng-include="'general/footer.html'"></div>
